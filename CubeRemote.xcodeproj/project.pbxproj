@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F6732AA413B3E00300EE064D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6732AA213B3E00300EE064D /* Localizable.strings */; };
+		F6732AA613B3E1D200EE064D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6732AA513B3E1D200EE064D /* Default@2x.png */; };
 		F6D650CB13B3A2530095D322 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CA13B3A2530095D322 /* UIKit.framework */; };
 		F6D650CD13B3A2530095D322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CC13B3A2530095D322 /* Foundation.framework */; };
 		F6D650CF13B3A2530095D322 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CE13B3A2530095D322 /* CoreGraphics.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		F6732AA313B3E00300EE064D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6732AA513B3E1D200EE064D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "en.lproj/Default@2x.png"; sourceTree = "<group>"; };
 		F6D650C613B3A2530095D322 /* CubeRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D650CA13B3A2530095D322 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F6D650CC13B3A2530095D322 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,10 +153,11 @@
 		F6D650D113B3A2530095D322 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F6732AA213B3E00300EE064D /* Localizable.strings */,
 				F6D650D213B3A2530095D322 /* CubeRemote-Info.plist */,
-				F6D650D313B3A2530095D322 /* InfoPlist.strings */,
 				F6D650D613B3A2530095D322 /* CubeRemote-Prefix.pch */,
+				F6732AA513B3E1D200EE064D /* Default@2x.png */,
+				F6D650D313B3A2530095D322 /* InfoPlist.strings */,
+				F6732AA213B3E00300EE064D /* Localizable.strings */,
 				F6D650D713B3A2530095D322 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -270,6 +273,7 @@
 				F6D650DE13B3A2530095D322 /* MainWindow.xib in Resources */,
 				F6D650E413B3A2530095D322 /* CubeRemoteViewController.xib in Resources */,
 				F6732AA413B3E00300EE064D /* Localizable.strings in Resources */,
+				F6732AA613B3E1D200EE064D /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
