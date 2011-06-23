@@ -53,7 +53,7 @@
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:MyIdentifier] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.textLabel.text = @"Transmitting OSC";
+		cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Toggle transmitting OSC data");
 		UISwitch *toggleOnOff = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
 		cell.accessoryView = toggleOnOff;
 		[(UISwitch *)cell.accessoryView setOn:NO];
