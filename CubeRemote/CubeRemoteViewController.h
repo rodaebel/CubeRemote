@@ -10,7 +10,7 @@
 @class CubeRemoteAppDelegate;
 
 @interface CubeRemoteViewController : UIViewController {
-	IBOutlet UISwitch * toggleOnOff;
+
 }
 
 @property (nonatomic, retain) IBOutlet UISwitch * toggleOnOff;

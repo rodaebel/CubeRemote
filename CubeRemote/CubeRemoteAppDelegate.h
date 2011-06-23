@@ -21,6 +21,6 @@
 
 @property (nonatomic, retain) IBOutlet CubeRemoteViewController *viewController;
 
-- (void)sendOnOff:(BOOL)value;
+- (void)switchOnOff:(BOOL)value;
 
 @end

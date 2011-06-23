@@ -11,19 +11,19 @@
 #import "osc/OscOutboundPacketStream.h"
 
 
-#define BUFFER_SIZE						1024
+#define BUFFER_SIZE 1024
 
-#define kOutgoingAddress			@"10.0.1.31" // TODO Should be configurrable
+#define kOutgoingAddress @"10.0.1.31" // TODO Should be configurrable
 
-#define kOutgoingPort					7000
+#define kOutgoingPort 7000
 
-#define kUpdateFrequency			60.0
+#define kUpdateFrequency 60.0
 
-#define kOSCAccelerationPath	"/accxyz"
+#define kOSCAccelerationPath "/accxyz"
 
-#define kOSCTogglePath				"/1/toggle1"
+#define kOSCTogglePath "/1/toggle1"
 
-#define kOSCFaderPath					"/1/fader1"
+#define kOSCFaderPath	"/1/fader1"
 
 
 @implementation CubeRemoteAppDelegate
@@ -120,7 +120,7 @@
 
 #pragma mark - API
 
-- (void)sendOnOff:(BOOL)value
+- (void)switchOnOff:(BOOL)value
 {
 	enabled = value;
 
