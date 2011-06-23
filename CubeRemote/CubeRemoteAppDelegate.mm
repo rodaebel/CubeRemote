@@ -35,6 +35,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	enabled = NO;
+	
 	// Setup asynchronous UDP socket
 	self->sendSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
 	[sendSocket setRunLoopModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
@@ -104,20 +106,24 @@
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
-	// Send accelerometer data
-	char buffer[BUFFER_SIZE];
+	if (enabled) {
+		// Send accelerometer data
+		char buffer[BUFFER_SIZE];
 
-	osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
+		osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
 
-	packet << osc::BeginMessage(kOSCAccelerationPath) << (float)acceleration.x << (float)acceleration.y << (float)acceleration.z << osc::EndMessage;
+		packet << osc::BeginMessage(kOSCAccelerationPath) << (float)acceleration.x << (float)acceleration.y << (float)acceleration.z << osc::EndMessage;
 
-	[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:kOutgoingAddress port:kOutgoingPort withTimeout:-1 tag:0];
+		[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:kOutgoingAddress port:kOutgoingPort withTimeout:-1 tag:0];
+	}
 }
 
 #pragma mark - API
 
 - (void)sendOnOff:(BOOL)value
 {
+	enabled = value;
+
 	char buffer[BUFFER_SIZE];
 	
 	osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);

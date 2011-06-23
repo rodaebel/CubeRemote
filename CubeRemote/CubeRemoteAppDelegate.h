@@ -13,6 +13,8 @@
 @interface CubeRemoteAppDelegate : NSObject <UIApplicationDelegate, AsyncUdpSocketDelegate, UIAccelerometerDelegate> {
 @private
 	AsyncUdpSocket *sendSocket;
+
+	BOOL enabled;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
