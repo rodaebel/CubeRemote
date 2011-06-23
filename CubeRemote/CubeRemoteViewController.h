@@ -9,8 +9,9 @@
 
 @class CubeRemoteAppDelegate;
 
-@interface CubeRemoteViewController : UIViewController <UITableViewDelegate> {
+@interface CubeRemoteViewController : UIViewController <UITableViewDelegate, UITextFieldDelegate> {
 
+	CubeRemoteAppDelegate *appDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UISwitch * toggleOnOff;

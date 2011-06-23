@@ -13,9 +13,9 @@
 
 #define BUFFER_SIZE 1024
 
-#define kOutgoingAddress @"10.0.1.31" // TODO Should be configurrable
+#define DEFAULT_ADDRESS @"10.0.1.31"
 
-#define kOutgoingPort 7000
+#define PORT 7000
 
 #define kUpdateFrequency 60.0
 
@@ -28,6 +28,7 @@
 
 @implementation CubeRemoteAppDelegate
 
+@synthesize address = _address;
 
 @synthesize window = _window;
 
@@ -36,6 +37,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	enabled = NO;
+
+	self.address = DEFAULT_ADDRESS;
 	
 	// Setup asynchronous UDP socket
 	self->sendSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
@@ -97,6 +100,8 @@
 		sendSocket = nil;
 	}
 
+	[_address release];
+
 	[_window release];
 	[_viewController release];
 	[super dealloc];
@@ -114,7 +119,7 @@
 
 		packet << osc::BeginMessage(kOSCAccelerationPath) << (float)acceleration.x << (float)acceleration.y << (float)acceleration.z << osc::EndMessage;
 
-		[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:kOutgoingAddress port:kOutgoingPort withTimeout:-1 tag:0];
+		[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:self.address port:PORT withTimeout:-1 tag:0];
 	}
 }
 
@@ -130,7 +135,7 @@
 	
 	packet << osc::BeginMessage(kOSCTogglePath) << (float)value << osc::EndMessage;
 	
-	[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:kOutgoingAddress port:kOutgoingPort withTimeout:-1 tag:0];
+	[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:self.address port:PORT withTimeout:-1 tag:0];
 }
 
 @end

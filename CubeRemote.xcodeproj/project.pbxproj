@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66E80D913B3F3E000B47F68 /* MicLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66E80D813B3F3E000B47F68 /* MicLevelController.m */; };
 		F6732AA413B3E00300EE064D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6732AA213B3E00300EE064D /* Localizable.strings */; };
 		F6732AA613B3E1D200EE064D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6732AA513B3E1D200EE064D /* Default@2x.png */; };
 		F6D650CB13B3A2530095D322 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CA13B3A2530095D322 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F66E80D713B3F3E000B47F68 /* MicLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicLevelController.h; sourceTree = "<group>"; };
+		F66E80D813B3F3E000B47F68 /* MicLevelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicLevelController.m; sourceTree = "<group>"; };
 		F6732AA313B3E00300EE064D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F6732AA513B3E1D200EE064D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "en.lproj/Default@2x.png"; sourceTree = "<group>"; };
 		F6D650C613B3A2530095D322 /* CubeRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,8 @@
 				F6D650DF13B3A2530095D322 /* CubeRemoteViewController.h */,
 				F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */,
 				F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */,
+				F66E80D713B3F3E000B47F68 /* MicLevelController.h */,
+				F66E80D813B3F3E000B47F68 /* MicLevelController.m */,
 				F6D650DC13B3A2530095D322 /* MainWindow.xib */,
 				F6D6510B13B3A49A0095D322 /* osc */,
 				F6D650D113B3A2530095D322 /* Supporting Files */,
@@ -317,6 +322,7 @@
 				F6D6511913B3A49A0095D322 /* OscPrintReceivedElements.cpp in Sources */,
 				F6D6511A13B3A49A0095D322 /* OscReceivedElements.cpp in Sources */,
 				F6D6511B13B3A49A0095D322 /* OscTypes.cpp in Sources */,
+				F66E80D913B3F3E000B47F68 /* MicLevelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,16 @@
 
 @synthesize toggleOnOff = _toggleOnOff;
 
+- (void)awakeFromNib
+{
+	appDelegate = (CubeRemoteAppDelegate *)[[UIApplication sharedApplication] delegate];;
+}
+
 - (void)dealloc
 {
+	appDelegate = nil;
+	[_toggleOnOff release];
+
 	[super dealloc];
 }
 
@@ -28,7 +36,6 @@
 - (void)viewDidUnload
 {
 	[super viewDidUnload];
-	[_toggleOnOff release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -41,26 +48,63 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-	return 1;
+	return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString *MyIdentifier = @"SomeIdentifier";
+	static NSString *cellId = @"Cell";
 
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
 
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:MyIdentifier] autorelease];
+
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:cellId] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Toggle transmitting OSC data");
-		UISwitch *toggleOnOff = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
-		cell.accessoryView = toggleOnOff;
-		[(UISwitch *)cell.accessoryView setOn:NO];
-		[(UISwitch *)cell.accessoryView addTarget:self action:@selector(switchDidChangeValue:) forControlEvents:UIControlEventValueChanged];
+
+		switch (indexPath.row) {
+			case 0:
+				cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Toggle transmitting OSC data");
+
+				UISwitch *toggleOnOff = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleOnOff setOn:NO];
+				[toggleOnOff addTarget:self action:@selector(switchDidChangeValue:) forControlEvents:UIControlEventValueChanged];
+
+				cell.accessoryView = toggleOnOff;
+				break;
+			case 1:
+				cell.accessoryType = UITableViewCellAccessoryNone;
+				cell.textLabel.text = NSLocalizedString(@"CRAddress", "Enter address");
+
+				UITextField *addrField = [[[UITextField alloc] initWithFrame:CGRectMake(215, 12, 100, 30)] autorelease];
+				addrField.adjustsFontSizeToFitWidth = YES;
+				addrField.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+				addrField.autoresizesSubviews = YES;
+				addrField.text = appDelegate.address;
+				addrField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+				addrField.delegate = self;
+
+				[cell addSubview:addrField];
+				break;
+			default:
+				break;
+		}
 	}
 
 	return cell;
+}
+
+#pragma mark - UITextFieldDelegate methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+	appDelegate.address = textField.text;	
 }
 
 #pragma mark - API
@@ -68,12 +112,8 @@
 - (IBAction)switchDidChangeValue:(id)sender
 {
 	assert([sender isKindOfClass:[UISwitch class]]);
-
-	CubeRemoteAppDelegate * applicationDelegate = (CubeRemoteAppDelegate *)[[UIApplication sharedApplication] delegate];
-
 	UISwitch * mySwitch = (UISwitch *)sender;
-
-	[applicationDelegate switchOnOff:mySwitch.on];
+	[appDelegate switchOnOff:mySwitch.on];
 }
 
 @end

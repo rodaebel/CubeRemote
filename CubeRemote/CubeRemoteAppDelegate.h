@@ -17,6 +17,8 @@
 	BOOL enabled;
 }
 
+@property (nonatomic, retain) NSString *address;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain) IBOutlet CubeRemoteViewController *viewController;
