@@ -23,7 +23,7 @@
 
 #define kOSCTogglePath "/1/toggle1"
 
-#define kOSCFaderPath	"/1/fader1"
+#define kOSCFaderPath "/1/fader1"
 
 
 @implementation CubeRemoteAppDelegate
