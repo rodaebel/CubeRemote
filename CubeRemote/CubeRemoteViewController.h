@@ -9,7 +9,7 @@
 
 @class CubeRemoteAppDelegate;
 
-@interface CubeRemoteViewController : UIViewController {
+@interface CubeRemoteViewController : UIViewController <UITableViewDelegate> {
 
 }
 
