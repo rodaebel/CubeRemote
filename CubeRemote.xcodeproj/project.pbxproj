@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6D650CB13B3A2530095D322 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CA13B3A2530095D322 /* UIKit.framework */; };
+		F6D650CD13B3A2530095D322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CC13B3A2530095D322 /* Foundation.framework */; };
+		F6D650CF13B3A2530095D322 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CE13B3A2530095D322 /* CoreGraphics.framework */; };
+		F6D650D513B3A2530095D322 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D650D313B3A2530095D322 /* InfoPlist.strings */; };
+		F6D650D813B3A2530095D322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D650D713B3A2530095D322 /* main.m */; };
+		F6D650DB13B3A2530095D322 /* CubeRemoteAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6D650DA13B3A2530095D322 /* CubeRemoteAppDelegate.mm */; };
+		F6D650DE13B3A2530095D322 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D650DC13B3A2530095D322 /* MainWindow.xib */; };
+		F6D650E113B3A2530095D322 /* CubeRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */; };
+		F6D650E413B3A2530095D322 /* CubeRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */; };
+		F6D650EB13B3A2530095D322 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CA13B3A2530095D322 /* UIKit.framework */; };
+		F6D650EC13B3A2530095D322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CC13B3A2530095D322 /* Foundation.framework */; };
+		F6D650ED13B3A2530095D322 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CE13B3A2530095D322 /* CoreGraphics.framework */; };
+		F6D650F513B3A2530095D322 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D650F313B3A2530095D322 /* InfoPlist.strings */; };
+		F6D650F813B3A2530095D322 /* CubeRemoteTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F6D650F713B3A2530095D322 /* CubeRemoteTests.h */; };
+		F6D650FA13B3A2530095D322 /* CubeRemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D650F913B3A2530095D322 /* CubeRemoteTests.m */; };
+		F6D6510A13B3A4070095D322 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6510913B3A4070095D322 /* AsyncUdpSocket.m */; };
+		F6D6511813B3A49A0095D322 /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6D6510F13B3A49A0095D322 /* OscOutboundPacketStream.cpp */; };
+		F6D6511913B3A49A0095D322 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6D6511213B3A49A0095D322 /* OscPrintReceivedElements.cpp */; };
+		F6D6511A13B3A49A0095D322 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6D6511413B3A49A0095D322 /* OscReceivedElements.cpp */; };
+		F6D6511B13B3A49A0095D322 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6D6511613B3A49A0095D322 /* OscTypes.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6D650EE13B3A2530095D322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6D650BD13B3A2530095D322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6D650C513B3A2530095D322;
+			remoteInfo = CubeRemote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6D650C613B3A2530095D322 /* CubeRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D650CA13B3A2530095D322 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F6D650CC13B3A2530095D322 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6D650CE13B3A2530095D322 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F6D650D213B3A2530095D322 /* CubeRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubeRemote-Info.plist"; sourceTree = "<group>"; };
+		F6D650D413B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6D650D613B3A2530095D322 /* CubeRemote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CubeRemote-Prefix.pch"; sourceTree = "<group>"; };
+		F6D650D713B3A2530095D322 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6D650D913B3A2530095D322 /* CubeRemoteAppDelegate.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = CubeRemoteAppDelegate.h; sourceTree = "<group>"; tabWidth = 2; };
+		F6D650DA13B3A2530095D322 /* CubeRemoteAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = CubeRemoteAppDelegate.mm; sourceTree = "<group>"; };
+		F6D650DD13B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F6D650DF13B3A2530095D322 /* CubeRemoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeRemoteViewController.h; sourceTree = "<group>"; };
+		F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeRemoteViewController.m; sourceTree = "<group>"; };
+		F6D650E313B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CubeRemoteViewController.xib; sourceTree = "<group>"; };
+		F6D650EA13B3A2530095D322 /* CubeRemoteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeRemoteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D650F213B3A2530095D322 /* CubeRemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubeRemoteTests-Info.plist"; sourceTree = "<group>"; };
+		F6D650F413B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6D650F613B3A2530095D322 /* CubeRemoteTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CubeRemoteTests-Prefix.pch"; sourceTree = "<group>"; };
+		F6D650F713B3A2530095D322 /* CubeRemoteTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeRemoteTests.h; sourceTree = "<group>"; };
+		F6D650F913B3A2530095D322 /* CubeRemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeRemoteTests.m; sourceTree = "<group>"; };
+		F6D6510813B3A4070095D322 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		F6D6510913B3A4070095D322 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		F6D6510C13B3A49A0095D322 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageMappingOscPacketListener.h; sourceTree = "<group>"; };
+		F6D6510D13B3A49A0095D322 /* OscException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscException.h; sourceTree = "<group>"; };
+		F6D6510E13B3A49A0095D322 /* OscHostEndianness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscHostEndianness.h; sourceTree = "<group>"; };
+		F6D6510F13B3A49A0095D322 /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscOutboundPacketStream.cpp; sourceTree = "<group>"; };
+		F6D6511013B3A49A0095D322 /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscOutboundPacketStream.h; sourceTree = "<group>"; };
+		F6D6511113B3A49A0095D322 /* OscPacketListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscPacketListener.h; sourceTree = "<group>"; };
+		F6D6511213B3A49A0095D322 /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscPrintReceivedElements.cpp; sourceTree = "<group>"; };
+		F6D6511313B3A49A0095D322 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscPrintReceivedElements.h; sourceTree = "<group>"; };
+		F6D6511413B3A49A0095D322 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscReceivedElements.cpp; sourceTree = "<group>"; };
+		F6D6511513B3A49A0095D322 /* OscReceivedElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscReceivedElements.h; sourceTree = "<group>"; };
+		F6D6511613B3A49A0095D322 /* OscTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscTypes.cpp; sourceTree = "<group>"; };
+		F6D6511713B3A49A0095D322 /* OscTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OscTypes.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6D650C313B3A2530095D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D650CB13B3A2530095D322 /* UIKit.framework in Frameworks */,
+				F6D650CD13B3A2530095D322 /* Foundation.framework in Frameworks */,
+				F6D650CF13B3A2530095D322 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D650E613B3A2530095D322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D650EB13B3A2530095D322 /* UIKit.framework in Frameworks */,
+				F6D650EC13B3A2530095D322 /* Foundation.framework in Frameworks */,
+				F6D650ED13B3A2530095D322 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6D650BB13B3A2530095D322 = {
+			isa = PBXGroup;
+			children = (
+				F6D650D013B3A2530095D322 /* CubeRemote */,
+				F6D650F013B3A2530095D322 /* CubeRemoteTests */,
+				F6D650C913B3A2530095D322 /* Frameworks */,
+				F6D650C713B3A2530095D322 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6D650C713B3A2530095D322 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6D650C613B3A2530095D322 /* CubeRemote.app */,
+				F6D650EA13B3A2530095D322 /* CubeRemoteTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6D650C913B3A2530095D322 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6D650CA13B3A2530095D322 /* UIKit.framework */,
+				F6D650CC13B3A2530095D322 /* Foundation.framework */,
+				F6D650CE13B3A2530095D322 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6D650D013B3A2530095D322 /* CubeRemote */ = {
+			isa = PBXGroup;
+			children = (
+				F6D6510813B3A4070095D322 /* AsyncUdpSocket.h */,
+				F6D6510913B3A4070095D322 /* AsyncUdpSocket.m */,
+				F6D650D913B3A2530095D322 /* CubeRemoteAppDelegate.h */,
+				F6D650DA13B3A2530095D322 /* CubeRemoteAppDelegate.mm */,
+				F6D650DC13B3A2530095D322 /* MainWindow.xib */,
+				F6D650DF13B3A2530095D322 /* CubeRemoteViewController.h */,
+				F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */,
+				F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */,
+				F6D6510B13B3A49A0095D322 /* osc */,
+				F6D650D113B3A2530095D322 /* Supporting Files */,
+			);
+			path = CubeRemote;
+			sourceTree = "<group>";
+		};
+		F6D650D113B3A2530095D322 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D650D213B3A2530095D322 /* CubeRemote-Info.plist */,
+				F6D650D313B3A2530095D322 /* InfoPlist.strings */,
+				F6D650D613B3A2530095D322 /* CubeRemote-Prefix.pch */,
+				F6D650D713B3A2530095D322 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6D650F013B3A2530095D322 /* CubeRemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6D650F713B3A2530095D322 /* CubeRemoteTests.h */,
+				F6D650F913B3A2530095D322 /* CubeRemoteTests.m */,
+				F6D650F113B3A2530095D322 /* Supporting Files */,
+			);
+			path = CubeRemoteTests;
+			sourceTree = "<group>";
+		};
+		F6D650F113B3A2530095D322 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D650F213B3A2530095D322 /* CubeRemoteTests-Info.plist */,
+				F6D650F313B3A2530095D322 /* InfoPlist.strings */,
+				F6D650F613B3A2530095D322 /* CubeRemoteTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6D6510B13B3A49A0095D322 /* osc */ = {
+			isa = PBXGroup;
+			children = (
+				F6D6510C13B3A49A0095D322 /* MessageMappingOscPacketListener.h */,
+				F6D6510D13B3A49A0095D322 /* OscException.h */,
+				F6D6510E13B3A49A0095D322 /* OscHostEndianness.h */,
+				F6D6510F13B3A49A0095D322 /* OscOutboundPacketStream.cpp */,
+				F6D6511013B3A49A0095D322 /* OscOutboundPacketStream.h */,
+				F6D6511113B3A49A0095D322 /* OscPacketListener.h */,
+				F6D6511213B3A49A0095D322 /* OscPrintReceivedElements.cpp */,
+				F6D6511313B3A49A0095D322 /* OscPrintReceivedElements.h */,
+				F6D6511413B3A49A0095D322 /* OscReceivedElements.cpp */,
+				F6D6511513B3A49A0095D322 /* OscReceivedElements.h */,
+				F6D6511613B3A49A0095D322 /* OscTypes.cpp */,
+				F6D6511713B3A49A0095D322 /* OscTypes.h */,
+			);
+			path = osc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6D650C513B3A2530095D322 /* CubeRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D650FD13B3A2530095D322 /* Build configuration list for PBXNativeTarget "CubeRemote" */;
+			buildPhases = (
+				F6D650C213B3A2530095D322 /* Sources */,
+				F6D650C313B3A2530095D322 /* Frameworks */,
+				F6D650C413B3A2530095D322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubeRemote;
+			productName = CubeRemote;
+			productReference = F6D650C613B3A2530095D322 /* CubeRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6D650E913B3A2530095D322 /* CubeRemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D6510013B3A2530095D322 /* Build configuration list for PBXNativeTarget "CubeRemoteTests" */;
+			buildPhases = (
+				F6D650E513B3A2530095D322 /* Sources */,
+				F6D650E613B3A2530095D322 /* Frameworks */,
+				F6D650E713B3A2530095D322 /* Resources */,
+				F6D650E813B3A2530095D322 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6D650EF13B3A2530095D322 /* PBXTargetDependency */,
+			);
+			name = CubeRemoteTests;
+			productName = CubeRemoteTests;
+			productReference = F6D650EA13B3A2530095D322 /* CubeRemoteTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6D650BD13B3A2530095D322 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F6D650C013B3A2530095D322 /* Build configuration list for PBXProject "CubeRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F6D650BB13B3A2530095D322;
+			productRefGroup = F6D650C713B3A2530095D322 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6D650C513B3A2530095D322 /* CubeRemote */,
+				F6D650E913B3A2530095D322 /* CubeRemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6D650C413B3A2530095D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D650D513B3A2530095D322 /* InfoPlist.strings in Resources */,
+				F6D650DE13B3A2530095D322 /* MainWindow.xib in Resources */,
+				F6D650E413B3A2530095D322 /* CubeRemoteViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D650E713B3A2530095D322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D650F513B3A2530095D322 /* InfoPlist.strings in Resources */,
+				F6D650F813B3A2530095D322 /* CubeRemoteTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6D650E813B3A2530095D322 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6D650C213B3A2530095D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D650D813B3A2530095D322 /* main.m in Sources */,
+				F6D650DB13B3A2530095D322 /* CubeRemoteAppDelegate.mm in Sources */,
+				F6D650E113B3A2530095D322 /* CubeRemoteViewController.m in Sources */,
+				F6D6510A13B3A4070095D322 /* AsyncUdpSocket.m in Sources */,
+				F6D6511813B3A49A0095D322 /* OscOutboundPacketStream.cpp in Sources */,
+				F6D6511913B3A49A0095D322 /* OscPrintReceivedElements.cpp in Sources */,
+				F6D6511A13B3A49A0095D322 /* OscReceivedElements.cpp in Sources */,
+				F6D6511B13B3A49A0095D322 /* OscTypes.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D650E513B3A2530095D322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D650FA13B3A2530095D322 /* CubeRemoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6D650EF13B3A2530095D322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6D650C513B3A2530095D322 /* CubeRemote */;
+			targetProxy = F6D650EE13B3A2530095D322 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6D650D313B3A2530095D322 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D650D413B3A2530095D322 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6D650DC13B3A2530095D322 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D650DD13B3A2530095D322 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D650E313B3A2530095D322 /* en */,
+			);
+			name = CubeRemoteViewController.xib;
+			sourceTree = "<group>";
+		};
+		F6D650F313B3A2530095D322 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D650F413B3A2530095D322 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6D650FB13B3A2530095D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F6D650FC13B3A2530095D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		F6D650FE13B3A2530095D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CubeRemote/CubeRemote-Prefix.pch";
+				INFOPLIST_FILE = "CubeRemote/CubeRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6D650FF13B3A2530095D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CubeRemote/CubeRemote-Prefix.pch";
+				INFOPLIST_FILE = "CubeRemote/CubeRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F6D6510113B3A2530095D322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CubeRemote.app/CubeRemote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CubeRemoteTests/CubeRemoteTests-Prefix.pch";
+				INFOPLIST_FILE = "CubeRemoteTests/CubeRemoteTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F6D6510213B3A2530095D322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CubeRemote.app/CubeRemote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CubeRemoteTests/CubeRemoteTests-Prefix.pch";
+				INFOPLIST_FILE = "CubeRemoteTests/CubeRemoteTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6D650C013B3A2530095D322 /* Build configuration list for PBXProject "CubeRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D650FB13B3A2530095D322 /* Debug */,
+				F6D650FC13B3A2530095D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D650FD13B3A2530095D322 /* Build configuration list for PBXNativeTarget "CubeRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D650FE13B3A2530095D322 /* Debug */,
+				F6D650FF13B3A2530095D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D6510013B3A2530095D322 /* Build configuration list for PBXNativeTarget "CubeRemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D6510113B3A2530095D322 /* Debug */,
+				F6D6510213B3A2530095D322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6D650BD13B3A2530095D322 /* Project object */;
+}
