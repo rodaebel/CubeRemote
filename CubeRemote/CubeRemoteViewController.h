@@ -12,6 +12,8 @@
 @interface CubeRemoteViewController : UIViewController <UITableViewDelegate, UITextFieldDelegate> {
 
 	CubeRemoteAppDelegate *appDelegate;
+
+	NSArray *sectionArray;
 }
 
 @property (nonatomic, retain) IBOutlet UISwitch * toggleOnOff;

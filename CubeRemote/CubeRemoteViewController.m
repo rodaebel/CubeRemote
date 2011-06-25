@@ -35,6 +35,7 @@
 
 - (void)viewDidUnload
 {
+	NSLog(@"View did unload");
 	[super viewDidUnload];
 }
 
@@ -45,6 +46,16 @@
 }
 
 #pragma mark - UITableView data source methods
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	NSString *sectionHeader = nil;
+
+	if (section == 0)
+		sectionHeader = NSLocalizedString(@"CROpenSoundControl", "OSC Label");;
+
+	return sectionHeader;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
