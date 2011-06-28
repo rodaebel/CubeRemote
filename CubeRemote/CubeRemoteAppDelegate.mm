@@ -93,10 +93,10 @@
 	if (oscEnabled) {
 		// Send microphone level data
 		char buffer[BUFFER_SIZE];
-		
+
 		osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
 		packet << osc::BeginMessage(kOSCFaderPath) << (float)[level floatValue] << osc::EndMessage;
-		
+
 		[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:self.address port:PORT withTimeout:-1 tag:0];
 	}
 }
