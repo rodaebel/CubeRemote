@@ -34,9 +34,12 @@
 
 @synthesize viewController = _viewController;
 
+@synthesize micLevelController = _micLevelController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	enabled = NO;
+	oscEnabled = NO;
+	accelerometerEnabled = NO;
 
 	self.address = DEFAULT_ADDRESS;
 	
@@ -111,31 +114,65 @@
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
-	if (enabled) {
+	if (oscEnabled && accelerometerEnabled) {
 		// Send accelerometer data
 		char buffer[BUFFER_SIZE];
 
 		osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
-
 		packet << osc::BeginMessage(kOSCAccelerationPath) << (float)acceleration.x << (float)acceleration.y << (float)acceleration.z << osc::EndMessage;
 
 		[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:self.address port:PORT withTimeout:-1 tag:0];
 	}
 }
 
+#pragma mark - MicLevelControllerDelegate methods
+
+- (void)didReceiveMicLevel:(NSNumber *)level
+{
+	if (oscEnabled) {
+		// Send microphone level data
+		char buffer[BUFFER_SIZE];
+		
+		osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
+		packet << osc::BeginMessage(kOSCFaderPath) << (float)[level floatValue] << osc::EndMessage;
+		
+		[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:self.address port:PORT withTimeout:-1 tag:0];
+	}
+}
+
 #pragma mark - API
 
-- (void)switchOnOff:(BOOL)value
+- (IBAction)switchOSC:(id)sender
 {
-	enabled = value;
-
+	assert([sender isKindOfClass:[UISwitch class]]);
+	UISwitch *mySwitch = (UISwitch *)sender;
+	oscEnabled = mySwitch.on;
+	
 	char buffer[BUFFER_SIZE];
 	
 	osc::OutboundPacketStream packet(buffer, BUFFER_SIZE);
-	
-	packet << osc::BeginMessage(kOSCTogglePath) << (float)value << osc::EndMessage;
+	packet << osc::BeginMessage(kOSCTogglePath) << (float)oscEnabled << osc::EndMessage;
 	
 	[sendSocket sendData:[NSData dataWithBytes:packet.Data() length:packet.Size()] toHost:self.address port:PORT withTimeout:-1 tag:0];
+}
+
+- (IBAction)switchAccelerometer:(id)sender
+{
+	assert([sender isKindOfClass:[UISwitch class]]);
+	UISwitch *mySwitch = (UISwitch *)sender;
+	accelerometerEnabled = mySwitch.on;
+}
+
+- (IBAction)switchRecorder:(id)sender
+{
+	assert([sender isKindOfClass:[UISwitch class]]);
+	UISwitch *mySwitch = (UISwitch *)sender;
+
+	if (mySwitch.on)
+		[self.micLevelController startRecording:self];
+	else
+		[self.micLevelController stopRecording:self];
+	
 }
 
 @end

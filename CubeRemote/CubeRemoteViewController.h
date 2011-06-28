@@ -18,6 +18,4 @@
 
 @property (nonatomic, retain) IBOutlet UISwitch * toggleOnOff;
 
-- (IBAction)switchDidChangeValue:(id)sender;
-
 @end

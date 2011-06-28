@@ -35,7 +35,6 @@
 
 - (void)viewDidUnload
 {
-	NSLog(@"View did unload");
 	[super viewDidUnload];
 }
 
@@ -59,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-	return 2;
+	return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,15 +74,33 @@
 
 		switch (indexPath.row) {
 			case 0:
-				cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Toggle transmitting OSC data");
-
-				UISwitch *toggleOnOff = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
-				[toggleOnOff setOn:NO];
-				[toggleOnOff addTarget:self action:@selector(switchDidChangeValue:) forControlEvents:UIControlEventValueChanged];
-
-				cell.accessoryView = toggleOnOff;
+				cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Switch on/off OSC");
+				
+				UISwitch *toggleOSC = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleOSC setOn:NO];
+				[toggleOSC addTarget:appDelegate action:@selector(switchOSC:) forControlEvents:UIControlEventValueChanged];
+				
+				cell.accessoryView = toggleOSC;
 				break;
 			case 1:
+				cell.textLabel.text = NSLocalizedString(@"CRToggleAccelerometer", "Switch on/off accelerometer");
+
+				UISwitch *toggleAccelerometer = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleAccelerometer setOn:NO];
+				[toggleAccelerometer addTarget:appDelegate action:@selector(switchAccelerometer:) forControlEvents:UIControlEventValueChanged];
+
+				cell.accessoryView = toggleAccelerometer;
+				break;
+			case 2:
+				cell.textLabel.text = NSLocalizedString(@"CRToggleRec", "Switch on/off microphone");
+				
+				UISwitch *toggleRec = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleRec setOn:NO];
+				[toggleRec addTarget:appDelegate action:@selector(switchRecorder:) forControlEvents:UIControlEventValueChanged];
+				
+				cell.accessoryView = toggleRec;
+				break;
+			case 3:
 				cell.accessoryType = UITableViewCellAccessoryNone;
 				cell.textLabel.text = NSLocalizedString(@"CRAddress", "Enter address");
 
@@ -116,15 +133,6 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
 	appDelegate.address = textField.text;	
-}
-
-#pragma mark - API
-
-- (IBAction)switchDidChangeValue:(id)sender
-{
-	assert([sender isKindOfClass:[UISwitch class]]);
-	UISwitch * mySwitch = (UISwitch *)sender;
-	[appDelegate switchOnOff:mySwitch.on];
 }
 
 @end

@@ -1,3 +1,5 @@
 "CROpenSoundControl" = "Open Sound Control";
-"CRToggleOSC" = "Sending Data";
+"CRToggleOSC" = "Sending";
+"CRToggleAccelerometer" = "Accelerometer";
+"CRToggleRec" = "Microphone";
 "CRAddress" = "Address";
