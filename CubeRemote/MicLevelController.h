@@ -9,7 +9,7 @@
 #import <CoreAudio/CoreAudioTypes.h>
 
 @protocol MicLevelControllerDelegate
-
+@optional
 - (void)didReceiveMicLevel:(NSNumber *)level;
 
 @end
