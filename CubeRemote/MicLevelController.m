@@ -45,11 +45,12 @@
 {
 	[recorder updateMeters];
 
-	const double ALPHA = 0.05;
+	const double ALPHA = 0.1;
 	double peakPowerForChannel = pow(10, (0.05 * [recorder peakPowerForChannel:0]));
 	lowPassResult = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * lowPassResult;	
 
-	[delegate didReceiveMicLevel:[NSNumber numberWithDouble:lowPassResult]];
+	if ([delegate respondsToSelector:@selector(didReceiveMicLevel:)])
+		[delegate didReceiveMicLevel:[NSNumber numberWithDouble:lowPassResult]];
 }
 
 - (IBAction)startRecording:(id)sender
