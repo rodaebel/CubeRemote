@@ -10,8 +10,6 @@
 
 @implementation CubeRemoteViewController
 
-@synthesize toggleOnOff = _toggleOnOff;
-
 - (void)awakeFromNib
 {
 	appDelegate = (CubeRemoteAppDelegate *)[[UIApplication sharedApplication] delegate];;
@@ -20,7 +18,6 @@
 - (void)dealloc
 {
 	appDelegate = nil;
-	[_toggleOnOff release];
 
 	[super dealloc];
 }

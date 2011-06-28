@@ -16,6 +16,4 @@
 	NSArray *sectionArray;
 }
 
-@property (nonatomic, retain) IBOutlet UISwitch * toggleOnOff;
-
 @end
