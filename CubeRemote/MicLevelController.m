@@ -21,16 +21,16 @@
 							  [NSNumber numberWithInt: AVAudioQualityMax],         AVEncoderAudioQualityKey,
 							  nil];
 
-  	NSError *error;
+	NSError *error;
 
 	recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
-	
+
   	if (recorder) {
-  		[recorder prepareToRecord];
-  		recorder.meteringEnabled = YES;
-  		[recorder record];
-  	} else
-  		NSLog(@"%@", [error description]);
+		[recorder prepareToRecord];
+		recorder.meteringEnabled = YES;
+		[recorder record];
+	} else
+		NSLog(@"%@", [error description]);
 }
 
 - (void)dealloc
@@ -38,7 +38,7 @@
 	[recorder release];
 	recorder = nil;
 
-    [super dealloc];
+	[super dealloc];
 }
 
 - (void)timerCallback:(NSTimer *)timer

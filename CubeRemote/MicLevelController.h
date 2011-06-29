@@ -17,7 +17,7 @@
 
 @interface MicLevelController : NSObject {
 @private
-    AVAudioRecorder *recorder;
+	AVAudioRecorder *recorder;
 	NSTimer *callbackTimer;
 	double lowPassResult;
 @public
