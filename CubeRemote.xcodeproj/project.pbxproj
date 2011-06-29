@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6536F8B13BB855400438BB3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CD176913B9B6AF0033EBF7 /* AVFoundation.framework */; };
 		F66E80D913B3F3E000B47F68 /* MicLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66E80D813B3F3E000B47F68 /* MicLevelController.m */; };
 		F6732AA413B3E00300EE064D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6732AA213B3E00300EE064D /* Localizable.strings */; };
 		F6732AA613B3E1D200EE064D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6732AA513B3E1D200EE064D /* Default@2x.png */; };
@@ -35,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F6D650EE13B3A2530095D322 /* PBXContainerItemProxy */ = {
+		F6536F8C13BB86B100438BB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F6D650BD13B3A2530095D322 /* Project object */;
 			proxyType = 1;
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6536F8B13BB855400438BB3 /* AVFoundation.framework in Frameworks */,
 				F6D650EB13B3A2530095D322 /* UIKit.framework in Frameworks */,
 				F6D650EC13B3A2530095D322 /* Foundation.framework in Frameworks */,
 				F6D650ED13B3A2530095D322 /* CoreGraphics.framework in Frameworks */,
@@ -247,7 +249,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F6D650EF13B3A2530095D322 /* PBXTargetDependency */,
+				F6536F8D13BB86B100438BB3 /* PBXTargetDependency */,
 			);
 			name = CubeRemoteTests;
 			productName = CubeRemoteTests;
@@ -345,10 +347,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F6D650EF13B3A2530095D322 /* PBXTargetDependency */ = {
+		F6536F8D13BB86B100438BB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6D650C513B3A2530095D322 /* CubeRemote */;
-			targetProxy = F6D650EE13B3A2530095D322 /* PBXContainerItemProxy */;
+			targetProxy = F6536F8C13BB86B100438BB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -24,6 +24,8 @@
 	IBOutlet NSObject<MicLevelControllerDelegate> *delegate;
 }
 
+- (id)initWithDelegate:(id)delegate;
+
 - (IBAction)startRecording:(id)sender;
 
 - (IBAction)stopRecording:(id)sender;

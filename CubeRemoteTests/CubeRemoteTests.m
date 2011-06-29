@@ -7,26 +7,37 @@
 
 #import "CubeRemoteTests.h"
 
+#import "MicLevelController.h"
+
+@interface MyMicLevelControllerDelegate : NSObject<MicLevelControllerDelegate> {
+
+}
+
+@end
+
+
+@implementation MyMicLevelControllerDelegate
+
+- (void)didReceiveMicLevel:(NSNumber *)level
+{
+
+}
+
+@end
+
 
 @implementation CubeRemoteTests
 
-- (void)setUp
+- (void)testMicLevelController
 {
-    [super setUp];
-    
-    // Set-up code here.
-}
+	MyMicLevelControllerDelegate *myDelegate = [[MyMicLevelControllerDelegate alloc] init];
+    MicLevelController* micLevelController = [[MicLevelController alloc] initWithDelegate:myDelegate];
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
+	[micLevelController startRecording:self];
+	[micLevelController stopRecording:self];
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in CubeRemoteTests");
+	[myDelegate release];
+	[micLevelController release];
 }
 
 @end

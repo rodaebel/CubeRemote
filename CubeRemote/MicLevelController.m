@@ -10,6 +10,16 @@
 
 @implementation MicLevelController
 
+- (id)initWithDelegate:(id)del
+{
+	self = [super init];
+	if (self)
+	{
+		delegate = del;
+	}
+	return self;
+}
+
 - (void)awakeFromNib
 {
 	NSURL *url = [NSURL fileURLWithPath:@"/dev/null"];
