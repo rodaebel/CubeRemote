@@ -71,36 +71,9 @@
 
 		switch (indexPath.row) {
 			case 0:
-				cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Switch on/off OSC");
-				
-				UISwitch *toggleOSC = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
-				[toggleOSC setOn:NO];
-				[toggleOSC addTarget:appDelegate action:@selector(switchOSC:) forControlEvents:UIControlEventValueChanged];
-				
-				cell.accessoryView = toggleOSC;
-				break;
-			case 1:
-				cell.textLabel.text = NSLocalizedString(@"CRToggleAccelerometer", "Switch on/off accelerometer");
-
-				UISwitch *toggleAccelerometer = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
-				[toggleAccelerometer setOn:NO];
-				[toggleAccelerometer addTarget:appDelegate action:@selector(switchAccelerometer:) forControlEvents:UIControlEventValueChanged];
-
-				cell.accessoryView = toggleAccelerometer;
-				break;
-			case 2:
-				cell.textLabel.text = NSLocalizedString(@"CRToggleRec", "Switch on/off microphone");
-				
-				UISwitch *toggleRec = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
-				[toggleRec setOn:NO];
-				[toggleRec addTarget:appDelegate action:@selector(switchRecorder:) forControlEvents:UIControlEventValueChanged];
-				
-				cell.accessoryView = toggleRec;
-				break;
-			case 3:
 				cell.accessoryType = UITableViewCellAccessoryNone;
 				cell.textLabel.text = NSLocalizedString(@"CRAddress", "Enter address");
-
+	
 				UITextField *addrField = [[[UITextField alloc] initWithFrame:CGRectMake(215, 12, 100, 30)] autorelease];
 				addrField.adjustsFontSizeToFitWidth = YES;
 				addrField.autoresizingMask = UIViewAutoresizingFlexibleHeight;
@@ -110,6 +83,33 @@
 				addrField.delegate = self;
 
 				[cell addSubview:addrField];
+				break;
+			case 1:
+				cell.textLabel.text = NSLocalizedString(@"CRToggleOSC", "Switch on/off OSC");
+
+				UISwitch *toggleOSC = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleOSC setOn:NO];
+				[toggleOSC addTarget:appDelegate action:@selector(switchOSC:) forControlEvents:UIControlEventValueChanged];
+
+				cell.accessoryView = toggleOSC;
+				break;
+			case 2:
+				cell.textLabel.text = NSLocalizedString(@"CRToggleAccelerometer", "Switch on/off accelerometer");
+
+				UISwitch *toggleAccelerometer = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleAccelerometer setOn:NO];
+				[toggleAccelerometer addTarget:appDelegate action:@selector(switchAccelerometer:) forControlEvents:UIControlEventValueChanged];
+
+				cell.accessoryView = toggleAccelerometer;
+				break;
+			case 3:
+				cell.textLabel.text = NSLocalizedString(@"CRToggleRec", "Switch on/off microphone");
+
+				UISwitch *toggleRec = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+				[toggleRec setOn:NO];
+				[toggleRec addTarget:appDelegate action:@selector(switchRecorder:) forControlEvents:UIControlEventValueChanged];
+
+				cell.accessoryView = toggleRec;
 				break;
 			default:
 				break;
