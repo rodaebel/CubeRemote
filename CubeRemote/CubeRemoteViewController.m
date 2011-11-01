@@ -74,11 +74,12 @@
 				cell.accessoryType = UITableViewCellAccessoryNone;
 				cell.textLabel.text = NSLocalizedString(@"CRAddress", "Enter address");
 	
-				UITextField *addrField = [[[UITextField alloc] initWithFrame:CGRectMake(215, 12, 100, 30)] autorelease];
+				UITextField *addrField = [[[UITextField alloc] initWithFrame:CGRectMake(150, 12, 150, 30)] autorelease];
 				addrField.adjustsFontSizeToFitWidth = YES;
 				addrField.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 				addrField.autoresizesSubviews = YES;
 				addrField.text = appDelegate.address;
+				addrField.textAlignment = UITextAlignmentRight;
 				addrField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 				addrField.delegate = self;
 
