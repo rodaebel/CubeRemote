@@ -66,7 +66,7 @@
 
 	if (cell == nil) {
 
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:cellId] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
 		switch (indexPath.row) {
