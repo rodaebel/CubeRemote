@@ -31,7 +31,7 @@
 - (void)testMicLevelController
 {
 	MyMicLevelControllerDelegate *myDelegate = [[MyMicLevelControllerDelegate alloc] init];
-    MicLevelController* micLevelController = [[MicLevelController alloc] initWithDelegate:myDelegate];
+	MicLevelController* micLevelController = [[MicLevelController alloc] initWithDelegate:myDelegate];
 
 	[micLevelController startRecording:self];
 	[micLevelController stopRecording:self];
