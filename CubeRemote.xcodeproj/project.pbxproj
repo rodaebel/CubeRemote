@@ -21,7 +21,7 @@
 		F6D650DB13B3A2530095D322 /* CubeRemoteAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6D650DA13B3A2530095D322 /* CubeRemoteAppDelegate.mm */; };
 		F6D650DE13B3A2530095D322 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D650DC13B3A2530095D322 /* MainWindow.xib */; };
 		F6D650E113B3A2530095D322 /* CubeRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */; };
-		F6D650E413B3A2530095D322 /* CubeRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */; };
+		F6D650E413B3A2530095D322 /* CubeRemoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D650E213B3A2530095D322 /* CubeRemoteView.xib */; };
 		F6D650EB13B3A2530095D322 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CA13B3A2530095D322 /* UIKit.framework */; };
 		F6D650EC13B3A2530095D322 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CC13B3A2530095D322 /* Foundation.framework */; };
 		F6D650ED13B3A2530095D322 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D650CE13B3A2530095D322 /* CoreGraphics.framework */; };
@@ -65,7 +65,7 @@
 		F6D650DD13B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		F6D650DF13B3A2530095D322 /* CubeRemoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeRemoteViewController.h; sourceTree = "<group>"; };
 		F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeRemoteViewController.m; sourceTree = "<group>"; };
-		F6D650E313B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CubeRemoteViewController.xib; sourceTree = "<group>"; };
+		F6D650E313B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CubeRemoteView.xib; sourceTree = "<group>"; };
 		F6D650EA13B3A2530095D322 /* CubeRemoteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeRemoteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D650F213B3A2530095D322 /* CubeRemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubeRemoteTests-Info.plist"; sourceTree = "<group>"; };
 		F6D650F413B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				F6D650DA13B3A2530095D322 /* CubeRemoteAppDelegate.mm */,
 				F6D650DF13B3A2530095D322 /* CubeRemoteViewController.h */,
 				F6D650E013B3A2530095D322 /* CubeRemoteViewController.m */,
-				F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */,
+				F6D650E213B3A2530095D322 /* CubeRemoteView.xib */,
 				F66E80D713B3F3E000B47F68 /* MicLevelController.h */,
 				F66E80D813B3F3E000B47F68 /* MicLevelController.m */,
 				F6D650DC13B3A2530095D322 /* MainWindow.xib */,
@@ -289,7 +289,7 @@
 			files = (
 				F6D650D513B3A2530095D322 /* InfoPlist.strings in Resources */,
 				F6D650DE13B3A2530095D322 /* MainWindow.xib in Resources */,
-				F6D650E413B3A2530095D322 /* CubeRemoteViewController.xib in Resources */,
+				F6D650E413B3A2530095D322 /* CubeRemoteView.xib in Resources */,
 				F6732AA413B3E00300EE064D /* Localizable.strings in Resources */,
 				F6732AA613B3E1D200EE064D /* Default@2x.png in Resources */,
 			);
@@ -382,12 +382,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		F6D650E213B3A2530095D322 /* CubeRemoteViewController.xib */ = {
+		F6D650E213B3A2530095D322 /* CubeRemoteView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F6D650E313B3A2530095D322 /* en */,
 			);
-			name = CubeRemoteViewController.xib;
+			name = CubeRemoteView.xib;
 			sourceTree = "<group>";
 		};
 		F6D650F313B3A2530095D322 /* InfoPlist.strings */ = {

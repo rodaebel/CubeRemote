@@ -10,6 +10,15 @@
 
 @implementation CubeRemoteViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:@"CubeRemoteView" bundle:nibBundleOrNil];
+	if (self)
+	{
+	}
+	return self;
+}
+
 - (void)awakeFromNib
 {
 	appDelegate = (CubeRemoteAppDelegate *)[[UIApplication sharedApplication] delegate];;
