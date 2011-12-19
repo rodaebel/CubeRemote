@@ -2,8 +2,6 @@
 //  main.m
 //  CubeRemote
 //
-//  Created by Tobias on 6/23/11.
-//
 
 #import <UIKit/UIKit.h>
 

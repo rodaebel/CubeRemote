@@ -60,7 +60,7 @@
 		F6D650D413B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F6D650D613B3A2530095D322 /* CubeRemote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CubeRemote-Prefix.pch"; sourceTree = "<group>"; };
 		F6D650D713B3A2530095D322 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6D650D913B3A2530095D322 /* CubeRemoteAppDelegate.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = CubeRemoteAppDelegate.h; sourceTree = "<group>"; tabWidth = 4; };
+		F6D650D913B3A2530095D322 /* CubeRemoteAppDelegate.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = CubeRemoteAppDelegate.h; sourceTree = "<group>"; tabWidth = 2; };
 		F6D650DA13B3A2530095D322 /* CubeRemoteAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = CubeRemoteAppDelegate.mm; sourceTree = "<group>"; };
 		F6D650DD13B3A2530095D322 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		F6D650DF13B3A2530095D322 /* CubeRemoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeRemoteViewController.h; sourceTree = "<group>"; };

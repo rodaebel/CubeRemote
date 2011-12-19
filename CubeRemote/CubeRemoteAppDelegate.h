@@ -2,29 +2,31 @@
 //  CubeRemoteAppDelegate.h
 //  CubeRemote
 //
-//  Created by Tobias on 6/23/11.
-//
 
 #import <UIKit/UIKit.h>
 #import "AsyncUdpSocket.h"
 #import "MicLevelController.h"
 
+extern NSString * const kCRAvailableServices;
+
 @class CubeRemoteViewController;
 
-@interface CubeRemoteAppDelegate : NSObject <UIApplicationDelegate, AsyncUdpSocketDelegate, UIAccelerometerDelegate, MicLevelControllerDelegate> {
+@interface CubeRemoteAppDelegate : NSObject <UIApplicationDelegate, NSNetServiceBrowserDelegate, NSNetServiceDelegate, AsyncUdpSocketDelegate, UIAccelerometerDelegate, MicLevelControllerDelegate> {
 @private
-	AsyncUdpSocket *sendSocket;
+	NSNetServiceBrowser *_serviceBrowser;
+	NSMutableArray *_availableServices;
 
-	BOOL oscEnabled;
-	BOOL accelerometerEnabled;
+	AsyncUdpSocket *_sendSocket;
+
+	BOOL _oscEnabled;
+	BOOL _accelerometerEnabled;
 }
 
-@property (nonatomic, retain) NSString *address;
-
+@property (retain) NSArray *availableServices;
+@property (retain) NSString *address;
+@property NSInteger port;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @property (nonatomic, retain) IBOutlet CubeRemoteViewController *viewController;
-
 @property (nonatomic, retain) IBOutlet MicLevelController *micLevelController;
 
 - (IBAction)switchOSC:(id)sender;

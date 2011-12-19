@@ -2,18 +2,21 @@
 //  CubeRemoteViewController.h
 //  CubeRemote
 //
-//  Created by Tobias on 6/23/11.
-//
 
 #import <UIKit/UIKit.h>
 
 @class CubeRemoteAppDelegate;
 
-@interface CubeRemoteViewController : UIViewController <UITableViewDelegate, UITextFieldDelegate> {
-
-	CubeRemoteAppDelegate *appDelegate;
-
-	NSArray *sectionArray;
+@interface CubeRemoteViewController : UIViewController <UITableViewDelegate, UITextFieldDelegate>
+{
+@private
+	CubeRemoteAppDelegate *_appDelegate;
+	UITextField *_addressField;
+	UITextField *_portField;
 }
+
+@property (assign) IBOutlet UITableView *tableView;
+
+- (void)updateUserInterface;
 
 @end

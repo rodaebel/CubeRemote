@@ -2,8 +2,6 @@
 //  MicLevelController.h
 //  CubeRemote
 //
-//  Created by Tobias on 6/24/11.
-//
 
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
@@ -17,9 +15,9 @@
 
 @interface MicLevelController : NSObject {
 @private
-	AVAudioRecorder *recorder;
-	NSTimer *callbackTimer;
-	double lowPassResult;
+	AVAudioRecorder *_recorder;
+	NSTimer *_callbackTimer;
+	double _lowPassResult;
 @public
 	IBOutlet NSObject<MicLevelControllerDelegate> *delegate;
 }

@@ -3,3 +3,5 @@
 "CRToggleAccelerometer" = "Accelerometer";
 "CRToggleRec" = "Microphone";
 "CRAddress" = "Address";
+"CRPort" = "Port";
+"CRAvailableServers" = "Available Servers";
