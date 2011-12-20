@@ -210,7 +210,8 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-	_appDelegate.address = textField.text;	
+	if ([textField isEqual:_addressField]) _appDelegate.address = textField.text;
+	else if ([textField isEqual:_portField]) _appDelegate.port = [textField.text integerValue];
 }
 
 @end
