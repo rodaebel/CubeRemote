@@ -2,16 +2,12 @@
 //  CubeRemoteTests.m
 //  CubeRemoteTests
 //
-//  Created by Tobias on 6/23/11.
-//
 
 #import "CubeRemoteTests.h"
 
 #import "MicLevelController.h"
 
-@interface MyMicLevelControllerDelegate : NSObject<MicLevelControllerDelegate> {
-
-}
+@interface MyMicLevelControllerDelegate : NSObject<MicLevelControllerDelegate>
 
 @end
 
@@ -20,7 +16,6 @@
 
 - (void)didReceiveMicLevel:(NSNumber *)level
 {
-
 }
 
 @end

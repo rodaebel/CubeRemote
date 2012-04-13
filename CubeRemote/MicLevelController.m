@@ -33,7 +33,7 @@
 
 	_recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&error];
 
-  	if (_recorder) {
+	if (_recorder) {
 		[_recorder prepareToRecord];
 		_recorder.meteringEnabled = YES;
 		[_recorder record];
