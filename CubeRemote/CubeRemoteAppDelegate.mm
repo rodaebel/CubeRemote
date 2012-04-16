@@ -31,6 +31,9 @@ NSString * const kCRAvailableServices = @"availableServices";
 
 @synthesize address = _address;
 @synthesize port = _port;
+@synthesize isSending = _isSending;
+@synthesize oscEnabled = _oscEnabled;
+@synthesize accelerometerEnabled = _accelerometerEnabled;
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 @synthesize micLevelController = _micLevelController;
@@ -177,6 +180,7 @@ NSString * const kCRAvailableServices = @"availableServices";
 {
 	assert([sender isKindOfClass:[UISwitch class]]);
 	UISwitch *mySwitch = (UISwitch *)sender;
+	_isSending = mySwitch.on;
 
 	if (mySwitch.on)
 		[_micLevelController startRecording:self];

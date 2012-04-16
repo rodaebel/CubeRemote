@@ -18,6 +18,7 @@ extern NSString * const kCRAvailableServices;
 
 	AsyncUdpSocket *_sendSocket;
 
+	BOOL _isSending;
 	BOOL _oscEnabled;
 	BOOL _accelerometerEnabled;
 }
@@ -25,6 +26,9 @@ extern NSString * const kCRAvailableServices;
 @property (retain) NSArray *availableServices;
 @property (retain) NSString *address;
 @property NSInteger port;
+@property (assign) BOOL isSending;
+@property (assign) BOOL oscEnabled;
+@property (assign) BOOL accelerometerEnabled;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet CubeRemoteViewController *viewController;
 @property (nonatomic, retain) IBOutlet MicLevelController *micLevelController;
