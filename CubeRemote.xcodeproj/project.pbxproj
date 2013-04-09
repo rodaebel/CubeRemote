@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBB675CA170CA50F00706F54 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB675C9170CA50F00706F54 /* Default-568h@2x.png */; };
 		F63CDE4E149FE63F0046E6C6 /* CubeRemote_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = F63CDE4D149FE63F0046E6C6 /* CubeRemote_Retina.png */; };
 		F6536F8B13BB855400438BB3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CD176913B9B6AF0033EBF7 /* AVFoundation.framework */; };
 		F66E80D913B3F3E000B47F68 /* MicLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66E80D813B3F3E000B47F68 /* MicLevelController.m */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EBB675C9170CA50F00706F54 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "en.lproj/Default-568h@2x.png"; sourceTree = "<group>"; };
 		F63CDE4D149FE63F0046E6C6 /* CubeRemote_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CubeRemote_Retina.png; path = CubeRemote/CubeRemote_Retina.png; sourceTree = SOURCE_ROOT; };
 		F66E80D713B3F3E000B47F68 /* MicLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicLevelController.h; sourceTree = "<group>"; };
 		F66E80D813B3F3E000B47F68 /* MicLevelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicLevelController.m; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				F6D650D213B3A2530095D322 /* CubeRemote-Info.plist */,
 				F6D650D613B3A2530095D322 /* CubeRemote-Prefix.pch */,
 				F63CDE4D149FE63F0046E6C6 /* CubeRemote_Retina.png */,
+				EBB675C9170CA50F00706F54 /* Default-568h@2x.png */,
 				F6732AA513B3E1D200EE064D /* Default@2x.png */,
 				F6D650D313B3A2530095D322 /* InfoPlist.strings */,
 				F6732AA213B3E00300EE064D /* Localizable.strings */,
@@ -265,7 +268,7 @@
 		F6D650BD13B3A2530095D322 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = F6D650C013B3A2530095D322 /* Build configuration list for PBXProject "CubeRemote" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -296,6 +299,7 @@
 				F6732AA413B3E00300EE064D /* Localizable.strings in Resources */,
 				F6732AA613B3E1D200EE064D /* Default@2x.png in Resources */,
 				F63CDE4E149FE63F0046E6C6 /* CubeRemote_Retina.png in Resources */,
+				EBB675CA170CA50F00706F54 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

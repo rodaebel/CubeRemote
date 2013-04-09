@@ -118,7 +118,7 @@
 				addrField.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 				addrField.autoresizesSubviews = YES;
 				addrField.text = _appDelegate.address;
-				addrField.textAlignment = UITextAlignmentRight;
+				addrField.textAlignment = NSTextAlignmentRight;
 				addrField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 				addrField.delegate = self;
 				[cell addSubview:addrField];
@@ -132,7 +132,7 @@
 				portField.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 				portField.autoresizesSubviews = YES;
 				portField.text = [NSString stringWithFormat:@"%i", _appDelegate.port];
-				portField.textAlignment = UITextAlignmentRight;
+				portField.textAlignment = NSTextAlignmentRight;
 				portField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 				portField.delegate = self;
 				[cell addSubview:portField];
